@@ -1,0 +1,145 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#>.
+@prefix mo: <http://purl.org/ontology/mo#>.
+
+@prefix onto: <https://ecom.univ-paris8.fr/onto/onto#> .
+
+<https://ecom.univ-paris8.fr/onto/onto#> a owl:Ontology ;
+    dcterms:title "ecom" .
+
+onto:admin a rdfs:Class ;
+    rdfs:label "admin" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+onto:identifiant a rdf:Property ;
+    rdfs:label "idetifiant" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:mdp a rdf:Property ;
+    rdfs:label "mdp" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:mail a rdf:Property ;
+    rdfs:label "mail" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+    
+    
+    
+onto:users a rdfs:Class ;
+    rdfs:label "users" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+onto:identifiant a rdf:Property ;
+    rdfs:label "idetifiant" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:lastname a rdf:Property ;
+    rdfs:label "lastname" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+onto:mail a rdf:Property ;
+    rdfs:label "mail" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+    
+    
+onto:Categories a rdfs:Class ;
+    rdfs:label "Categories" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:catIdentifiant a rdf:Property ;
+    rdfs:label "catIdentifiant" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:catTite a rdf:Property ;
+    rdfs:label "catTitle" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:catTop a rdf:Property ;
+    rdfs:label "catTop" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+ 
+onto:catImage a rdf:Property ;
+    rdfs:label "catImage" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" . 
+    
+    
+onto:Contact a rdfs:Class ;
+    rdfs:label "Contact" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:contactIdentifiant a rdf:Property ;
+    rdfs:label "contactIdentifiant" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:contactEmail a rdf:Property ;
+    rdfs:label "contactEmail" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:contactHeading a rdf:Property ;
+    rdfs:label "contactHeading" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+onto:contactDescrition a rdf:Property ;
+    rdfs:label "contactDescroption" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+   
+onto:Product a rdfs:Class ;
+    rdfs:label "Product" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+onto:productIdentifiant a rdf:Property ;
+    rdfs:label "productIdentifiant" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:productTitle a rdf:Property ;
+    rdfs:label "productTitle" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+onto:productImage a rdf:Property ;
+    rdfs:label "productImage" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+onto:productPrice a rdf:Property ;
+    rdfs:label "produtPrice" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+    
+    
+    
+    
+    
