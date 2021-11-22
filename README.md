@@ -9,6 +9,5 @@
 - http://localhost/omeka-s-3.1.1/omeka-s/admin/item/4
 
 #lien vers l'exercice 1
-- https://megchichefarid.github.io/THYP_21-22/ex1/
-
+ -https://megchichefarid.github.io/THYP_21-22/ex1/index.html
 
