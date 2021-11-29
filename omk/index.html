@@ -11,6 +11,7 @@
     
 </head>
 <body>
+
     <div>
         <h1 align="center">Omeka_S</h1>
     </div>
@@ -30,6 +31,85 @@
         </div>
     </div>
 </div>
+<script>
+   
+    d3.json("data/resource_templates.json", function(data){
+
+        d3.select(".resource_templates").append("div").append("select").attr("class", "form-select rs_select")
+        .selectAll("option")
+        .data(data)
+        .enter().append("option").attr("value", function(d) {return d["o:id"];})
+        .html(function(d) {return d["o:label"];})
+
+        d3.select(".resource_templates").append("div")
+        .append("button").attr("class", "btn btn-primary").attr("id", "rs_details")
+        .html("Détails").on("click", function() { rs_details(d3.select(".rs_select").node().value )})
+    });
+
+    function rs_details(id){
+        file = "data/resource_templates_"+id+".json";
+        d3.select(".resource_templates_details").html("")
+        d3.select(".item_details").html("")
+        d3.json(file, function(data){
+            d3.select(".resource_templates_details").append("div").attr("class", "details")
+            d3.select(".details").append("h3").html("Details du Resource Template : "+data["o:label"])
+            d3.select(".details").append("ul")
+            d3.select(".details").append("li").html("@context : "+data["@context"])
+            d3.select(".details").append("li").html("@id : "+data["@id"])
+            d3.select(".details").append("li").html("@type : "+data["@type"])
+            d3.select(".details").append("li").html("o:id : "+data["o:id"])
+            d3.select(".details").append("li").html("o:label : "+data["o:label"])
+            d3.select(".details").append("li").html("o:owner @id : "+data["o:owner"]["@id"])
+            d3.select(".details").append("li").html("o:resource_class @id : "+data["o:resource_class"]["@id"])
+            d3.select(".details").append("li").attr("class", "items").html("resource templates items :")
+            d3.select(".details").append("ul")
+
+            file = "data/items_resource_templates_"+id+".json";
+            d3.json(file, function(data){
+                d3.select(".items").append("ul").selectAll("li")
+                .data(data).enter()
+                .append("li").html(function(d){return "item : <span class='item'>"+d["o:title"]+"</span> (click for details)"})
+                .on("click", function(d){ items_details(d["o:id"]) })
+            })        
+        })
+    }
+
+    function items_details(id){
+
+        file = "data/item_"+id+".json";
+        d3.select(".item_details").selectAll("*").remove()
+        
+        d3.json(file, function(data){
+            
+
+            d3.select(".item_details").append("div").attr("class", "it_d")
+            d3.select(".it_d").append("h3").html("Details de l'item : "+data["o:title"])
+            d3.select(".it_d").append("ul")
+            d3.select(".it_d").append("li").html("@context : "+data["@context"])
+            d3.select(".it_d").append("li").html("@id : "+data["@id"])
+            d3.select(".it_d").append("li").html("@type : "+data["@type"])
+            d3.select(".it_d").append("li").html("o:id : "+data["o:id"])
+            d3.select(".it_d").append("li").html("o:is_public : "+data["o:is_public"])
+            d3.select(".it_d").append("li").html("o:owner : "+data["o:owner"]["@id"])
+            d3.select(".it_d").append("li").html("o:resource_class : "+data["@id"])
+            d3.select(".it_d").append("li").html("o:resource_template : "+data["o:resource_class"]["@id"])
+            d3.select(".it_d").append("li").attr("class", "prop").html("properties : ")
+
+            d3.select(".prop").append("ul").attr("class", "props")
+            jQuery.each(data, function (i, val) {
+                if(i.includes("msv")){
+                    console.log(i,val)
+                    if(val[0]["@value"] == undefined)
+                        d3.select(".props").append("li").html(i+" : "+val[0]["@id"])
+                    else
+                        d3.select(".props").append("li").html(i+" : "+val[0]["@value"])
+                }
+             });
+             d3.select(".prop").append("ul")
+ 
+        })
+    }
+</script>   
    
 </body>
 </html>
