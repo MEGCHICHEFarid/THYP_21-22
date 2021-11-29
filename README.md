@@ -1,8 +1,10 @@
 #liens vers le projet
 - https://github.com/MEGCHICHEFarid/THYP_21-22/blob/main/projet.md
 
-#liens vers vocabulaire & githubpages
+#lien vers le vocabulaire 
 - https://github.com/MEGCHICHEFarid/THYP_21-22/blob/main/onto/onto.ttl
+
+#liens vers githubpages
 - https://github.com/MEGCHICHEFarid/THYP_21-22/settings/pages
 
 #liens vers les API
