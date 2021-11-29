@@ -1,5 +1,7 @@
-#liens vers le projet & vocabulaire & githubpages
+#liens vers le projet
 - https://github.com/MEGCHICHEFarid/THYP_21-22/blob/main/projet.md
+
+#liens vers vocabulaire & githubpages
 - https://github.com/MEGCHICHEFarid/THYP_21-22/blob/main/onto/onto.ttl
 - https://github.com/MEGCHICHEFarid/THYP_21-22/settings/pages
 
@@ -12,5 +14,5 @@
  - https://megchichefarid.github.io/THYP_21-22/ex1/index.html
 
 #lien vers récapitulatif Omk
-  - https://github.com/MEGCHICHEFarid/THYP_21-22/tree/main/omk
+  - https://github.com/MEGCHICHEFarid/THYP_21-22/blob/main/omk/index.html
 
