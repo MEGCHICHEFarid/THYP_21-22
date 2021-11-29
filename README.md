@@ -14,5 +14,5 @@
  - https://megchichefarid.github.io/THYP_21-22/ex1/index.html
 
 #lien vers récapitulatif Omk
-  - https://github.com/MEGCHICHEFarid/THYP_21-22/blob/main/omk/index.html
+  - https://megchichefarid.github.io/THYP_21-22/omk/index.html
 
