@@ -15,8 +15,6 @@
     <div>
         <h1 align="center">Omeka_S</h1>
     </div>
-      
-    
 <div class="container">
     <div class="section sec">
         <div class="row row-cols-2 resource_templates col-md-6">
@@ -33,7 +31,6 @@
         </div>
     </div>
 </div>
-
     <script>
    
     d3.json("data/resource_templates.json", function(data){
@@ -105,7 +102,6 @@
                         d3.select(".props").append("li").html(i+" : "+val[0]["@id"])
                     else
                         d3.select(".props").append("li").html(i+" : "+val[0]["@value"])
-
                 }
              });
              d3.select(".prop").append("ul")
